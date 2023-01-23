@@ -13,8 +13,6 @@ public class CartDAO {
 	public CartDAO() {
 		cartList = new ArrayList<Cart>();
 		cartNumber = 1000;
-
-		int dd = 0;
 	}
 
 	public int getCartNumber() {
