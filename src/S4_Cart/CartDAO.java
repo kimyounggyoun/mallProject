@@ -13,6 +13,8 @@ public class CartDAO {
 	public CartDAO() {
 		cartList = new ArrayList<Cart>();
 		cartNumber = 1000;
+
+		int dd = 0;
 	}
 
 	public int getCartNumber() {
@@ -31,7 +33,7 @@ public class CartDAO {
 //				((Cart) cartList.get(idx)).setBuy(buy); // 질문할것, boolean 변경
 				cartList.remove(i);
 			}
-			
+
 		}
 	}
 
