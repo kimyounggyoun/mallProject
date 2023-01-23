@@ -1,5 +1,7 @@
 package S1_Member;
+
 import java.util.ArrayList;
+
 public class MemberDAO {
 	private ArrayList<Member> memberList;
 	private int memberNumber;
@@ -9,13 +11,20 @@ public class MemberDAO {
 		memberList = new ArrayList<>();
 		setSampleData();
 	}
+
 	public void addMember(Member member) {
 		memberList.add(member);
 	}
+
 	public int getNextNumber() {
 		memberNumber += 1;
 		return memberNumber;
 	}
+
+	public void printMemberList() {
+		System.out.println(memberList);
+	}
+
 	boolean checkMember(String id) {
 		for (int i = 0; i < memberList.size(); i++) {
 			if (id.equals(memberList.get(i).getMemberID())) {
@@ -24,15 +33,16 @@ public class MemberDAO {
 		}
 		return false;
 	}
+
 	boolean checkMemberLogin(String id, String pw) {
 		for (int i = 0; i < memberList.size(); i++) {
-			if (id.equals(memberList.get(i).getMemberID()) && 
-					pw.equals(memberList.get(i).getMemberPW())) {
+			if (id.equals(memberList.get(i).getMemberID()) && pw.equals(memberList.get(i).getMemberPW())) {
 				return true;
 			}
 		}
 		return false;
 	}
+
 	public void setSampleData() {
 
 		Member member = new Member(getNextNumber(), "a", "a", "±èÃ¶¹Î");
